@@ -7,12 +7,6 @@ window.addEventListener("DOMContentLoaded", () => {
   // Used to access the app instance by the automated tests
   app.setEmojis(["🐒", "🦍", "🦧"]);
   app.addBananas();
-  document.querySelector("#emojis").textContent = "";
-  
-  const emojiDiv = document.querySelector("#emojis");
-  let emojiP = document.createElement("p");
-  emojiP.textContent = app.emojis.join(" ");
-  emojiDiv.appendChild(emojiP);
 
   window.__JS_APP = app;
 });
