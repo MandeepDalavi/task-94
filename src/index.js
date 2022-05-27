@@ -7,12 +7,12 @@ window.addEventListener("DOMContentLoaded", () => {
   // Used to access the app instance by the automated tests
   app.setEmojis(["🐒", "🦍", "🦧"]);
   app.addBananas();
-  document.getElementById("emojis").innerHTML = "";
+  document.querySelector("#emojis").innerHTML = "";
   
-  const emojiDiv = document.querySelector("emojis");
-  let emojiP = document.createElement("p");
-  emojiP.textContent = app.emojis.join(" ");
-  emojiDiv.appendChild(emojiP);
+  const emojiDiv = document.querySelector("#emojis");
+  emojiDiv.appendChild(document.createElement("p").textContent = app.emojis);
+  // emojiP.textContent = app.emojis;
+  // emojiDiv.appendChild(emojiP);
 
   window.__JS_APP = app;
 });
