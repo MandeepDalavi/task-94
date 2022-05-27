@@ -9,8 +9,8 @@ window.addEventListener("DOMContentLoaded", () => {
   app.addBananas();
   document.getElementById("emojis").innerHTML = "";
   
-  const emojiDiv = document.getElementById("emojis");
-  var emojiP = document.createElement("p");
+  const emojiDiv = document.querySelector("emojis");
+  let emojiP = document.createElement("p");
   emojiP.textContent = app.emojis.join(" ");
   emojiDiv.appendChild(emojiP);
 
